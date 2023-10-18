@@ -1,0 +1,49 @@
+<div class="mywrap">
+    <div class="fixed inset-0 bg-black opacity-20"></div>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Create Account</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fa-brands fa-google" style="color: #de560d;"></i></a>
+              <a href="#" class="social"><i class="fa-brands fa-facebook" style="color: #de560d;"></i></a>
+              <a href="#" class="social"><i class="fa-brands fa-windows" style="color: #de560d;"></i></a>
+            </div>
+            <span>Get started by creating an account with the available options.</span>
+            <input [(ngModel)]="name" name="name" type="text" placeholder="name" class="my-rounded-md">
+            <input [(ngModel)]="email" name="email" type="email" placeholder="Email" class="my-rounded-md">
+            <input [(ngModel)]="password" name="password" type="password" placeholder="Password" class="my-rounded-md">
+            <button>Sign Up</button>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign In</h1>
+            <div class="social-container">
+              <a href="#" class="social"><i class="fa-brands fa-google" style="color: #de560d;"></i></a>
+              <a href="#" class="social"><i class="fa-brands fa-facebook" style="color: #de560d;"></i></a>
+              <a href="#" class="social"><i class="fa-brands fa-windows" style="color: #de560d;"></i></a>
+            </div>
+            <span>Alternatively, log in with your existing account.</span>
+            <input [(ngModel)]="email" name="name" type="email" placeholder="Email" class="my-rounded-md">
+            <input [(ngModel)]="password" name="password" type="password" placeholder="Password" class="my-rounded-md">
+            <a href="#">Forgot Your Password?</a>
+            <button>Sign In</button>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome back!</h1>
+              <p>To keep connected with us, please log in</p>
+              <button class="ghost" id="signIn" (click)="signInOrSignUp()">Sign in</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello Friend!</h1>
+              <p>Enter Your personal details and start your journey</p>
+              <button class="ghost" id="signUp" (click)="signInOrSignUp()">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

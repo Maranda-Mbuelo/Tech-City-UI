@@ -1,0 +1,107 @@
+<app-navbar class="navbar-fixed-top"></app-navbar>
+<main>
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-interval="3000">
+        <div class="carousel-indicators">
+            <button *ngFor="let slide of slides; let i = index" type="button" [attr.data-bs-target]="'#myCarousel'"
+                [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i === 0"
+                [attr.aria-label]="'Slide ' + (i + 1)"></button>
+        </div>
+        <div class="carousel-inner">
+            <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === 0">
+                <img [src]="slide.imageUrl" class="carousel-image" [class.dimmed-image]="i === 1 || i ==2" />
+                <div class="container">
+                    <div class="carousel-caption" [class.text-start]="i === 0" [class.text-end]="i === 2">
+                        <h1 [innerText]="slide.title | titlecase"></h1>
+                        <p class="opacity-75" [innerHTML]="slide.description"></p>
+                        <button type="button" class="btn btn-lg btn-outline-warning" [innerText]="slide.buttonText"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+
+    <!-- Special section Start -->
+
+    <!-- <div class="d-flex justify-content-center">
+        <div style="width: 70%;">
+          <div class="card m-4">
+            <img src="https://www.teqfind.com/content/products/103109555_1058809319.jpg?width=1920" class="card-img" alt="Special Offer" />
+            <div class="card-img-overlay">
+              <div class="card-header text-white bg-dark">
+                Week's Special
+              </div>
+              <div class="card-body text-white">
+                <h5 class="card-title">RGB EarBuds from Bang & Olufsen</h5>
+                <p class="card-text">This week's special is RGB EarBuds from Bang & Olufsen, and they are available at a low price of R2,799.</p>
+                <a href="#" class="btn btn-primary">Grab Them Now</a>
+              </div>
+              <div class="card-footer text-body-secondary">
+                Limited time offer
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      
+
+    <!-- Special section Finish -->
+
+
+    <!-- Sub Profiles Start -->
+
+    <div class="container marketing mt-4">
+
+        <div class="row">
+            <div *ngFor="let feature of features" class="col-lg-4">
+              <img [src]="feature.imageUrl" class="bd-placeholder-img rounded-circle" width="140" height="140" />
+              <h2 class="fw-normal">{{ feature.title }}</h2>
+              <p>{{ feature.description }}</p>
+              <p><a class="btn btn-secondary" [href]="feature.link">View details »</a></p>
+            </div>
+          </div>
+
+        <!-- Sub Profiles Ends -->
+
+        <!-- START THE FEATURETTES -->
+        <ng-container *ngFor="let featurette of featurettes; let i = index">
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div [ngClass]="featurette.class1">
+                    <h2 class="featurette-heading fw-normal lh-1">{{ featurette.title }} <span
+                            class="text-body-secondary">{{ featurette.subtitle }}</span></h2>
+                    <p class="lead">{{ featurette.description }}</p>
+                </div>
+                <div [ngClass]="featurette.class2">
+                    <img [src]="featurette.imageUrl"
+                        class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" />
+                </div>
+            </div>
+        </ng-container>
+
+
+        <!-- /END THE FEATURETTES -->
+
+    </div>
+
+
+    <app-footer></app-footer>
+</main>
+
+<div>
+  <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
+    <title>Gray Clouds Background</title>
+    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
+  </svg>
+</div>

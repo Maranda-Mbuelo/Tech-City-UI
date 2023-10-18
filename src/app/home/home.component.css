@@ -1,0 +1,30 @@
+.navbar-fixed-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Adjust the z-index value as needed */
+}
+
+
+.carousel-image {
+    height: 100vh;
+    object-fit: cover;
+    /* To maintain image aspect ratio */
+    width: 100%;
+    /* Ensure full width */
+}
+
+.dimmed-image {
+    filter: brightness(0.5);
+    /* Adjust the value as needed */
+}
+
+svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
