@@ -1,8 +1,8 @@
 export interface IFeaturette {
-    imageUrl: string;
-    title: string;
-    subtitle: string;
+    imageUrl: string | any;
+    name: string;
     description: string;
+    price: number;
     class1: string;
     class2: string;
   }

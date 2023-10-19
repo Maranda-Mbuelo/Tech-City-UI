@@ -28,3 +28,68 @@ svg#clouds {
     z-index: -10;
     width: 1920px;
   }
+
+  .mybackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background-color: rgba(37, 56, 119, 0.74);
+  }
+
+  /* Center the spinner and text vertically and horizontally */
+.spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust this value for the desired height */
+  }
+  
+  /* Increase the spinner size */
+  .spinner-border {
+    width: 6rem; /* Adjust this value for the desired size */
+    height: 6rem; /* Adjust this value for the desired size */
+    margin-bottom: 1rem; /* Space between spinner and text */
+  }
+  
+  /* Style the "Loading..." text */
+  .spinner-text {
+    font-size: 1.5rem; /* Adjust this value for the desired font size */
+    color: #17a2b8; /* Desired text color */
+  }
+  
+
+
+
+  .card {
+    background-color: #f2f2f2; /* Background color of the cards */
+    margin: 10px; /* Add margin between cards */
+  }
+  
+  .card-img-top {
+    height: 200px; /* Set the desired height for all images */
+    object-fit: cover; /* Maintain aspect ratio of images */
+  }
+  
+  .card-title {
+    color: #FFA500; /* Set the title text color to orange */
+  }
+  
+  .card-text {
+    color: #007BFF; /* Set the description text color to blue */
+  }
+  
+  .card-text.text-secondary {
+    color: #6c757d; /* Set the "Last updated" text color to gray */
+  }
+  
+  .container .card-group .btn {
+    background-color: #17a2b8; /* Set the button background color to teal */
+    color: #fff; /* Set the button text color to white */
+  }
+  
+  .container .card-group .btn:hover {
+    background-color: #138496; /* Change button background color on hover */
+  }
+  
