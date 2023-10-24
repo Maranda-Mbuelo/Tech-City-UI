@@ -1,0 +1,37 @@
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Styles for the product not found message container */
+.product-not-found {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a card-like effect */
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Styles for the cloud-like bubble effect */
+  .cloud {
+    width: 80px;
+    height: 80px;
+    background: #f0f0f0; /* Background color of the cloud */
+    border-radius: 50%;
+    position: absolute;
+    top: -40px; /* Adjust the positioning to place the cloud above the message */
+    left: calc(50% - 40px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Box shadow for the cloud */
+  }
+  
+  /* Styles for the message text */
+  .message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333; /* Text color */
+  }
+  

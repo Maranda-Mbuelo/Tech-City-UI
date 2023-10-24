@@ -6,7 +6,7 @@
         <div class="spinner-grow text-warning" style="width: 3rem; height: 3rem;" role="status"></div>
         <div class="spinner-grow text-warning position-absolute" style="width: 3rem; height: 3rem; top: 50%; left: 50%; transform: translate(-50%, -50%);" role="status"></div>
       </div>
-      <div class="spinner-text">Loading...</div>
+      <div class="spinner-text text-warning" [innerText]="'loading...' | titlecase"></div>
     </div>
   </main>
 </ng-container>
@@ -15,7 +15,7 @@
 <ng-template #content>
   <app-navbar class="navbar-fixed-top"></app-navbar>
 
-  <main class="bs-body-color">
+  <main class="bg-dark">
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-interval="3000">
         <div class="carousel-indicators">
             <button *ngFor="let slide of slides; let i = index" type="button" [attr.data-bs-target]="'#myCarousel'"
@@ -77,19 +77,26 @@
 
     <div class="container marketing mt-4">
 
-      <h1 class="text-center mt-5 mb-4">Promotions</h1>
+      <h1 class="text-center text-warning mt-5 mb-4">Promotions</h1>
       
       <div class="card-group">
-        <div *ngFor="let feature of features" class="card rounded">
-          <img [src]="feature.imageUrl" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-warning">{{ feature.price | currency: "R" }}</h5>
-            <p class="card-text text-primary">{{ feature.description }}</p>
-            <p class="card-text text-secondary">Last updated 3 mins ago</p>
-            <a class="btn btn-info" [href]="feature.link">View details »</a>
+        <div class="row">
+          <div *ngFor="let feature of features" class="col-md-4"> <!-- Use col-md-4 to display 3 items per row on medium-sized screens -->
+            <div class="card rounded">
+              <img [src]="feature.imageUrl" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-warning">{{ feature.price | currency: "R" }}</h5>
+                <p class="card-text text-primary">{{ feature.name }}</p>
+                <p class="card-text text-warning">{{ feature.description }}</p>
+                <button class="btn btn-info" (click)="redirectToFeature(feature)">View details</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <hr class="featurette-divider text-warning mt-4">
+      
 
         <!-- Sub Profiles Ends -->
 
@@ -97,16 +104,16 @@
       <h1 class="text-center text-warning mt-5 mb-4">Online Exclusives</h1>
         <!-- START THE FEATURETTES -->
         <ng-container *ngFor="let featurette of featurettes; let i = index">
-          <hr class="featurette-divider">
+          
           <div class="row featurette">
-              <div [ngClass]="featurette.class1">
+              <div [ngClass]="featurette.class1" class="text-white">
                   <h2 class="featurette-heading">{{ featurette.name }}</h2>
-                  <p class="lead">{{ featurette.description }}</p>
+                  <p class="lead text-secondary">{{ featurette.description }}</p>
                   <p class="text-warning">
                       Price: {{ featurette.price | currency: 'R' }}
                   </p>
                   <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
-                    <button type="button" class="btn btn-outline-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-outline-primary btn-primary text-white">Add to Cart</button>
                     <button type="button" class="btn btn-outline-primary">View Item</button>
                   </div>
               </div>
@@ -116,6 +123,8 @@
                       height="500" alt="{{ featurette.name }}" />
               </div>
           </div>
+
+          <hr class="featurette-divider text-white mb-6">
         </ng-container>
         <!-- /END THE FEATURETTES -->
 
@@ -123,7 +132,7 @@
     </div>
 
 
-    <app-footer></app-footer>
+    <app-footer class="my-footer"></app-footer>
 </main>
 
 <div>

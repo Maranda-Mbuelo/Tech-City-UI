@@ -1,1 +1,62 @@
-<p>hi</p>
+<main class="bg-dark">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Side Navigation -->
+      <app-sidebar *ngIf="!loading"></app-sidebar>
+      <!-- Main Content -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+        <ng-template #products>
+          <div class="container">
+            <app-product [loading]="loading" [feature]="features" (selectItem)="handleItemSelected($event)"></app-product>
+          </div>
+        </ng-template>
+
+        <ng-container *ngIf="loading, else products">
+            <!-- Placeholder template to show while loading -->
+            <div class="row">
+              <div class="col-md-4" *ngFor="let _ of loadingPlaceholders">
+                <div class="card mb-4 custom-card d-flex flex-column">
+                  <div class="card-img-placeholder custom-img"></div>
+                  <div class="card-body">
+                    <h5 class="card-title placeholder-glow">
+                      <span class="placeholder col-8"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">
+                      <span class="placeholder col-7"></span>
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-6"></span>
+                      <span class="placeholder col-8"></span>
+                    </p>
+                    <button class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4" *ngFor="let _ of loadingPlaceholders">
+                <div class="card mb-4 custom-card d-flex flex-column">
+                  <div class="card-img-placeholder custom-img"></div>
+                  <div class="card-body">
+                    <h5 class="card-title placeholder-glow">
+                      <span class="placeholder col-8"></span>
+                    </h5>
+                    <p class="card-text placeholder-glow">
+                      <span class="placeholder col-7"></span>
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-4"></span>
+                      <span class="placeholder col-6"></span>
+                      <span class="placeholder col-8"></span>
+                    </p>
+                    <button class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </ng-container>
+      </main>
+    </div>
+  </div>
+</main>

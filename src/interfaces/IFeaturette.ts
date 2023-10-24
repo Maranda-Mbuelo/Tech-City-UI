@@ -1,9 +1,10 @@
 export interface IFeaturette {
-    imageUrl: string | any;
+    imageUrl: string;
+    link: string | undefined;
     name: string;
     description: string;
     price: number;
-    class1: string;
-    class2: string;
+    class1: string | undefined;
+    class2: string | undefined;
   }
   

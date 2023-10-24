@@ -1,1 +1,18 @@
-<p>product works!</p>
+<div class="row" *ngIf="!loading">
+    <div class="col-md-4" *ngFor="let feature of feature">
+        <div class="card rounded mb-4 custom-card d-flex flex-column">
+            <img [src]="feature.imageUrl" class="card-img-top" alt="{{ feature.name }}" />
+            <div class="card-body">
+                <h5 class="card-title">{{ feature.name }}</h5>
+                <p class="card-text">{{ feature.description }}</p>
+                <p class="text-warning">
+                    Price: {{ feature.price | currency: 'R' }}
+                </p>
+                <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                    <button type="button" class="btn btn-secondary" (click)="onItemSelected(feature)">Cart  <i class="fa-brands fa-shopify"></i>+</button>
+                    <button type="button" class="btn btn-outline-secondary" (click)="onViewClicked(feature)">View <i class="fas fa-eye"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

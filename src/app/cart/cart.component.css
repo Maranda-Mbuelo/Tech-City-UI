@@ -1,0 +1,14 @@
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
+
+select {
+    font-size: 1rem;
+}
+
+a{
+    cursor: pointer;
+    text-decoration-color: brown;
+}

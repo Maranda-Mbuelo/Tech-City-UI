@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+main{
+    font-family: 'Source Sans 3', sans-serif!important;
+}
+
 .navbar-fixed-top {
     position: absolute;
     top: 0;
@@ -63,7 +69,7 @@ svg#clouds {
 
 
   .card {
-    background-color: #f2f2f2; /* Background color of the cards */
+    background-color: #4d4d4d9f; /* Background color of the cards */
     margin: 10px; /* Add margin between cards */
   }
   
@@ -85,11 +91,46 @@ svg#clouds {
   }
   
   .container .card-group .btn {
-    background-color: #17a2b8; /* Set the button background color to teal */
+    background-color: #1757b8; /* Set the button background color to teal */
     color: #fff; /* Set the button text color to white */
+    border: none!important;
   }
   
   .container .card-group .btn:hover {
-    background-color: #138496; /* Change button background color on hover */
+    background-color: #133296; /* Change button background color on hover */
+  }
+  
+  .row img{
+    /* border-radius: 12px; */
+    background-color: transparent!important;
+  }
+
+  /* Select the first button in the button group */
+.btn-group > .btn:first-child:hover {
+    background-color: #004da0;
+    color: yellow;
+}
+
+
+
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+    width: 1px!important; /* Adjust the width as needed */
+  }
+  
+  /* Track (the area where the scrollbar moves) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Change the background color */
+  }
+  
+  /* Handle (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Change the thumb color */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change the thumb color on hover */
   }
   

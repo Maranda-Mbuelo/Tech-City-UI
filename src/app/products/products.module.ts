@@ -4,6 +4,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { FormsModule } from '@angular/forms';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ProductsRoutingModule } from './products-routing.module';
 
 
 
@@ -11,11 +13,13 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     ProductsComponent,
     ProductComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ProductsRoutingModule
   ]
 })
 export class ProductsModule { }

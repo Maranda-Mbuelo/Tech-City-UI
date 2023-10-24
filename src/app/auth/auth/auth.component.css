@@ -46,8 +46,8 @@ a{
 
 button{
     border-radius: 20px;
-    border: 1px solid #FF4B2B;
-    background-color: #FF4B2B;
+    border: 1px solid #212535;
+    background-color: #212535;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -83,7 +83,7 @@ form {
 
 input{
     background-color: #eee;
-    color: #af3520;
+    color: #1b1e2b;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
@@ -92,8 +92,8 @@ input{
 }
 
 input:focus {
-    box-shadow: 0 0 8px #FF4B2B;
-    border: 2px solid #FF4B2B;
+    box-shadow: 0 0 8px #212535;
+    border: 2px solid #2125358f;
 }
 
 .container{
@@ -172,7 +172,7 @@ input:focus {
 }
 
 .overlay{
-    background: #FF4B2B;
+    background: #212535;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -206,6 +206,7 @@ input:focus {
 
 .overlay-left{
     transform: translateX(-20%);
+    transition: 1s ease-in-out;
 }
 
 .container.right-panel-active .overlay-left {
@@ -215,6 +216,7 @@ input:focus {
 .overlay-right{
     right: 0;
     transform: translateX(0);
+    transition: 1s ease-in-out;
 }
  
 .container.right-panel-active .overlay-right{
@@ -226,7 +228,7 @@ input:focus {
 }
 
 .social-container a{
-    border: 1px solid #ff4b2b67;
+    border: 1px solid #2125356e;
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -234,10 +236,10 @@ input:focus {
     margin: 0 5px;
     height: 40px;
     width: 40px;
-    box-shadow: 0 0 6px 0 rgba(255, 75, 43, 0.5);
+    box-shadow: 0 0 6px 0 #212535;
     transition: box-shadow 0.3s ease;
 }
 
 .social-container a:hover {
-    box-shadow: 0 0 12px 0 rgba(255, 75, 43, 0.87);
+    box-shadow: 0 0 12px 0 #2b3046cc;
 }

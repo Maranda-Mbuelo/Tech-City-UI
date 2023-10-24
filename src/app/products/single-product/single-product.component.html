@@ -1,1 +1,47 @@
-<p>single-product works!</p>
+<ng-container *ngIf="!isProductFound, else page">
+
+    <main class="bg-body-tertiary d-flex justify-content-center align-items-center min-vh-100">
+        <div class="product-not-found">
+          <div class="cloud"></div>
+          <div class="message">Ooops! The product you're looking for is not found.</div>
+        </div>
+      </main>
+      
+</ng-container>
+
+<ng-template #page>
+    <main *ngIf="singleItem" class="bg-body-tertiary d-flex justify-content-center align-items-center min-vh-100">
+        <div class="container featurette py-5">
+            <div class="row align-items-center">
+                <!-- Card for Product Image (Visible on Mobile) -->
+                <div class="col-md-6 d-md-none mb-3">
+                    <div class="card p-3">
+                        <img [src]="singleItem.imageUrl"
+                            class="card-img-top" alt="Product Image" />
+                    </div>
+                </div>
+    
+                <!-- Product Information -->
+                <div class="col-md-6 text-dark">
+                    <h2 class="featurette-heading" [innerText]="singleItem.name"></h2>
+                    <p class="lead" [innerText]="singleItem.description"></p>
+                    <p class="text-warning" *ngIf="singleItem.price !== undefined">
+                        Price: {{ singleItem.price | currency: 'R' }}
+                    </p>
+                    <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
+                        <button type="button" class="btn btn-outline-primary btn-primary text-white" (click)="goBack()">Go Back</button>
+                        <button type="button" class="btn btn-outline-primary">Cart  <i class="fa-brands fa-shopify"></i>+</button>
+                    </div>
+                </div>
+    
+                <!-- Card for Product Image (Hidden on Mobile) -->
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="card p-3">
+                        <img [src]="singleItem.imageUrl"
+                            class="card-img-top" alt="Product Image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</ng-template>
