@@ -1,4 +1,4 @@
-<main class="bg-body-secondary p-3">
+<main class="p-3" style="background-color: #e9e9e9b7;">
     <div class="container">
         <main>
           <div class="py-5 text-center">
@@ -7,21 +7,21 @@
             <p class="lead">Thank you for choosing Tech City for your online shopping needs! We appreciate your business and look forward to serving you again in the future. Shopping with us is always a smart choice for top-quality tech products and an exceptional experience. See you soon for more tech-savvy adventures!</p>
           </div>
       
-          <div class="row g-5 bg-body-tertiary p-3 rounded">
+          <div class="row g-5 bg-body-secondary p-3 rounded">
             <div class="col-md-5 col-lg-4 order-md-last">
               <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-primary">Your cart</span>
                 <span class="badge bg-primary rounded-pill">3</span>
               </h4>
               <ul class="list-group mb-3">
-                <li *ngFor="let item of items" class="list-group-item d-flex justify-content-between lh-sm">
+                <li *ngFor="let item of items" [ngClass]="{'my-azure-background': item.name === 'Promo code'}" class="list-group-item d-flex justify-content-between lh-sm" style="background-color: beige;">
                   <div>
                     <h6 class="my-0" [ngClass]="{'text-success': item.name === 'Promo code'}">{{ item.name }}</h6>
-                    <small class="text-body-secondary" [ngClass]="{'text-success': item.name === 'Promo code'}">{{ item.description }}</small>
+                    <small class="text-body-secondary" [ngClass]="{'my-azure': item.name === 'Promo code'}">{{ item.description }}</small>
                   </div>
                   <span [ngClass]="{'text-success': item.name === 'Promo code'}">{{ item.price | currency: "R" }}</span>
                 </li>
-                <li class="list-group-item d-flex justify-content-between">
+                <li class="list-group-item d-flex justify-content-between bg-secondary text-white">
                   <span>Total (ZAR)</span>
                   <strong>{{ getTotalPrice() | currency: "R" }}</strong>
                 </li>

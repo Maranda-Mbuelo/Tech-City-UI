@@ -6,3 +6,11 @@
     --bs-popover-body-padding-x: 1rem;
     --bs-popover-body-padding-y: .5rem;
   }
+
+.my-azure-background{
+  background-color: azure!important;
+}
+
+.my-azure{
+  color: rgb(0, 139, 0)!important;
+}

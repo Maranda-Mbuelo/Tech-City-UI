@@ -6,5 +6,5 @@ export interface IFeaturette {
     price: number;
     class1: string | undefined;
     class2: string | undefined;
-  }
+}
   

@@ -12,3 +12,7 @@ a{
     cursor: pointer;
     text-decoration-color: brown;
 }
+
+.d-flex.flex-row.align-items-center a i{
+    color: brown!important;
+}
