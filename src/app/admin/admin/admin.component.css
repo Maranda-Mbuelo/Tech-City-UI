@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Ysabeau+Office:wght@100&display=swap');
+
+.container-fluid, main{
+    font-family: 'Gabarito', sans-serif!important;
+}

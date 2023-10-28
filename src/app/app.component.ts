@@ -7,7 +7,7 @@ import { ProductsService } from 'src/services/products.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'TechStore';
+  title = 'Tech City';
 
   constructor(private productService: ProductsService){}
 

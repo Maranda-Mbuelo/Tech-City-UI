@@ -28,6 +28,10 @@ export class ProductsService {
     );
   }
 
+  addProduct(product: IProduct): Observable<IProduct>{
+    return this.http.post<IProduct>(this.apiBaseUrl + '/api/Product/', product);
+  }
+
   editProduct(id: string, updatedProduct: IEditProduct): Observable<IEditProduct>{
     return this.http
     .put<IEditProduct>(
@@ -38,7 +42,7 @@ export class ProductsService {
   deleteProductById(id: string): Observable<IProduct>{
     return this.http
     .delete<IProduct>(
-      this.apiBaseUrl + '/api/' + id
+      this.apiBaseUrl + '/api/Product/' + id
     );
   }
 

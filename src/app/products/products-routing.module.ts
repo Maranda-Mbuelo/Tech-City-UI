@@ -14,10 +14,6 @@ const productsRoutes: Routes = [
     component: ProductsComponent,
   },
   {
-    path: 'product',
-    component: ProductComponent
-  },
-  {
     path: 'product/:id',
     component: SingleProductComponent,
   },
